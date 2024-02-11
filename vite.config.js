@@ -3,8 +3,10 @@ import { resolve } from 'path';
 
 export default defineConfig({
   root: 'src/',
-  outDir: './dist',
-  rollupOptions: {
-    input: resolve(__dirname, 'src/index.html'),
-  },
+  build:{
+    outDir: 'dist',
+    rollupOptions: {
+      input: resolve(__dirname, 'src/index.html'),
+    },
+  }
 });
