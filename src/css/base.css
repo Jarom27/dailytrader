@@ -28,6 +28,11 @@ nav {
     padding: 1.5rem;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
 .brand {
     display: flex;
     justify-content: center;
@@ -48,8 +53,22 @@ nav {
 
 .hero {
     width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .hero-image {
     width: 100%;
 }
+
+.content {
+    padding: 2rem;
+}
+
+.second-image {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.top-level {}
