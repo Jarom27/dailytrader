@@ -1,74 +1,99 @@
 :root {
-    --base-black: #121420;
-    --red-acent: #b76d68;
-    --gray-accent: #1b2432;
-    --dark-mode: #2c2b3c;
-    --onyx: #403f4c;
+  --base-black: #121420;
+  --red-acent: #b76d68;
+  --gray-accent: #1b2432;
+  --dark-mode: #2c2b3c;
+  --onyx: #403f4c;
 }
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a,
 p,
 span {
-    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+  font-family: 'Oswald', Arial, Helvetica, sans-serif;
 }
 
 nav {
-    background-color: var(--onyx);
-    padding: 1.5rem;
+  background-color: var(--onyx);
+  padding: 1.5rem;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .brand {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-menu {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    list-style-type: none;
-
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style-type: none;
 }
 
 .nav-menu li>a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 .hero {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .hero-image {
-    width: 100%;
+  width: 100%;
 }
 
 .content {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .second-image {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .top-level {}
+
+.card {
+  box-sizing: border-box;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px #0000;
+  border: 1px 1px 1px #0000;
+}
+
+.card h3 {
+  text-align: center;
+}
+
+#grid-list {
+  display: flex;
+  flex-direction: column;
+}
+
+#grid-list li {
+  list-style: none;
+}
+
+#grid-list li a {
+  text-decoration: none;
+}

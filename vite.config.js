@@ -8,5 +8,5 @@ export default defineConfig({
     rollupOptions: {
       input: resolve(__dirname, 'src/index.html'),
     },
-  }
+  },
 });
