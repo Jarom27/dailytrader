@@ -1,1 +1,1 @@
-import { GetData } from "./utils";
+import { GetData } from './utils';
