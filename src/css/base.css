@@ -45,7 +45,7 @@ main {
   list-style-type: none;
 }
 
-.nav-menu li > a {
+.nav-menu li>a {
   text-decoration: none;
   color: #fff;
 }
@@ -70,8 +70,7 @@ main {
   overflow: hidden;
 }
 
-.top-level {
-}
+.top-level {}
 
 .card {
   box-sizing: border-box;
@@ -97,4 +96,31 @@ main {
 
 #grid-list li a {
   text-decoration: none;
+}
+
+#table-values {
+  width: 100%;
+}
+
+#table-values thead tr {
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#table-values tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#table-values tbody tr {
+  font-family: 'Oswald', Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-content: center;
+  padding: 1rem;
+  border-bottom: var(--base-black) 1px solid;
 }

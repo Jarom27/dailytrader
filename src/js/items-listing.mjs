@@ -1,5 +1,6 @@
+import { GetData } from './ExternalServices.mjs';
 import { ListStocks } from './ListStocks.mjs';
-import { GetData, GetParams, GetTitle, SetTitle, ListCard } from './utils';
+import { GetParams, GetTitle, SetTitle, ListCard } from './utils';
 
 const gridContent = document.getElementById('grid-list')
 const titleList = document.getElementById('title-list');
@@ -27,6 +28,10 @@ function ReduceListForPreferedData(list) {
         case 'forex_pairs':
             param = 'currency_group'
             valueParam = 'Major'
+            break;
+        case 'cryptocurrencies':
+            param = '';
+            valueParam = '';
             break;
 
     }
