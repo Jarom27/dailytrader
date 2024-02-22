@@ -4,6 +4,8 @@ import { GetParams, GetTitle, SetTitle, ListCard } from './utils';
 
 const gridContent = document.getElementById('grid-list')
 const titleList = document.getElementById('title-list');
+const searchItem = document.getElementById('searchItem');
+
 let listStocks;
 let category = '';
 
@@ -43,6 +45,7 @@ function SetTitleList() {
     titleList.innerHTML = title;
 }
 function RenderItemList(grid, items) {
+    console.log(items)
     items.forEach(item => {
         let card = ListCard(item, category);
         let listElement = document.createElement('li');
@@ -51,3 +54,13 @@ function RenderItemList(grid, items) {
     });
 }
 init();
+searchItem.addEventListener('input', e => {
+    console.log(e.target.value)
+    gridContent.innerHTML = '';
+    let textSymbol = e.target.value.toLowerCase();
+    let filterList = listStocks.GetList().filter(item => item.symbol.toLowerCase() == textSymbol);
+    if (e.target.value == '') {
+        filterList = ReduceListForPreferedData(listStocks);
+    }
+    RenderItemList(gridContent, filterList);
+})

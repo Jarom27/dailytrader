@@ -20,6 +20,7 @@ export function ListCard(listElement, category, paramsToShow = 'symbol') {
     return `<a href = ../item-details/index.html?symbol=${listElement.symbol}&category=${category}>
         <div class = 'card'>
             <h3>${listElement[paramsToShow]}</h3>
+            ${listElement['name'] != undefined ? `<h4>${listElement['name']}</h4>` : ''}
         </div>
     </a>`;
 }

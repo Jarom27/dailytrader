@@ -10,6 +10,7 @@ async function init() {
     category = GetParams('category');
     symbol = GetParams('symbol');
     const data = await GetSpecificDataItem(symbol, category);
+    console.log(data);
     TableForValues(tableData.tBodies[0], data.values);
     SetTitle(symbol, document)
     SetTitleItem();

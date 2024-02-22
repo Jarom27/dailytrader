@@ -75,6 +75,7 @@ main {
 }
 
 .card {
+  text-align: center;
   background-color: #ffffff;
   box-sizing: border-box;
   padding: 3rem;
@@ -153,6 +154,10 @@ main {
   text-decoration: none;
 }
 
+#item-information {
+  display: flex;
+}
+
 #table-values {
   width: 100%;
 }
@@ -178,4 +183,8 @@ main {
   align-content: center;
   padding: 1rem;
   border-bottom: var(--base-black) 1px solid;
+}
+
+#table-values tbody tr td:first-child {
+  font-weight: bold;
 }
