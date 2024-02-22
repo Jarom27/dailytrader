@@ -1,4 +1,5 @@
 import { GetSpecificDataItem } from './ExternalServices.mjs';
+import { RegisterVisit } from './VisitHistory.mjs';
 import { TableForValues } from './graph';
 import { GetParams, SetTitle } from './utils';
 
@@ -14,6 +15,7 @@ async function init() {
     TableForValues(tableData.tBodies[0], data.values);
     SetTitle(symbol, document)
     SetTitleItem();
+    RegisterVisit(symbol, category);
 }
 
 function SetTitleItem() {

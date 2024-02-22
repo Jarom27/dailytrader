@@ -55,7 +55,6 @@ function RenderItemList(grid, items) {
 }
 init();
 searchItem.addEventListener('input', e => {
-    console.log(e.target.value)
     gridContent.innerHTML = '';
     let textSymbol = e.target.value.toLowerCase();
     let filterList = listStocks.GetList().filter(item => item.symbol.toLowerCase() == textSymbol);

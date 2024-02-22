@@ -24,6 +24,14 @@ export function ListCard(listElement, category, paramsToShow = 'symbol') {
         </div>
     </a>`;
 }
+export function ListCardHistory(listElement) {
+    return `<a href = ../item-details/index.html?symbol=${listElement.symbol}&category=${listElement.type}>
+        <div class = 'card'>
+            <h3>${listElement.symbol}</h3>
+            <p>You have visited ${listElement.numberOfVisits} times</p>
+        </div>
+    </a>`;
+}
 export function DetermineTrend(openValue, closeValue) {
     let trend = '';
     if ((openValue - closeValue) < 0) {

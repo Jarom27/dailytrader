@@ -33,8 +33,17 @@ main {
   background-color: #fafafa;
   display: flex;
   flex-direction: column;
-  padding: 2rem 4rem;
   gap: 3rem;
+}
+
+footer {
+  background-color: var(--onyx);
+  color: #ffffff;
+  padding: 2rem;
+}
+
+.content-secondary {
+  padding: 2rem 4rem;
 }
 
 .brand {
@@ -73,6 +82,17 @@ main {
   height: 100vh;
   overflow: hidden;
 }
+
+.top-level {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+}
+
+
 
 .card {
   text-align: center;
@@ -129,6 +149,17 @@ main {
 
 .card h3 {
   text-align: center;
+}
+
+#history {
+  list-style: none;
+
+  display: flex;
+  gap: 1rem;
+}
+
+#history li a {
+  text-decoration: none;
 }
 
 #title-controls {
