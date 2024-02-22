@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
+
   envDir: '.env',
   root: 'src/',
   build: {
@@ -9,7 +10,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
-        list: resolve(__dirname, 'src/items-listing/index.html'),
+        listing: resolve(__dirname, 'src/item-listing/index.html'),
         details: resolve(__dirname, 'src/item-details/index.html')
       },
 
