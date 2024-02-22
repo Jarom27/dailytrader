@@ -8,6 +8,11 @@ export class ListStocks {
             this.list.push(elem);
         });
     }
+    FilterListByParam(nameParam, valueParam) {
+        if (nameParam == '' && valueParam == '')
+            return this.list;
+        return this.list.filter(element => element[nameParam] == valueParam);
+    }
     GetList() {
         return this.list;
     }

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DailyTrader |</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Oswald:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/large.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
+    <script src="../js/item-detail.mjs" type="module" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <img src="/images/rsz_brand.webp" alt="Brand image" />
+        </div>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li>
+                    <a href="../item-listing/index.html?category=stocks">Stocks</a>
+                </li>
+                <li>
+                    <a href="../item-listing/index.html?category=forex_pairs">Currencies</a>
+                </li>
+                <li>
+                    <a href="../item-listing/index.html?category=cryptocurrencies">Cryptos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content-secondary">
+        <div id="item-information">
+            <h1 id="title-item"></h1>
+        </div>
+
+
+        <table id="table-values">
+            <thead>
+                <tr>
+                    <th>Date Time</th>
+                    <th>High</th>
+                    <th>Low</th>
+                    <th>Open/Close</th>
+                    <th>Trend</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+
+    </main>
+    <footer></footer>
+</body>
+
+</html>

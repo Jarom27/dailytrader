@@ -1,15 +1,3 @@
-import.meta.env.RAPID_API_KEY;
-const url = 'https://www.alphavantage.co/query';
-export async function GetData(category) {
-    const response = await fetch(
-        `https://api.twelvedata.com/${category}?source=docs`,
-    );
-    return await response.json();
-}
-export async function GetSpecificDataItem(item, duration, interval = 5) {
-    const searchURL = `${url}?function=${duration}&symbol=${item}&interval=${interval}min`;
-    const response = fetch(searchURL);
-}
 export function GetParams(param) {
     const queryString = new URLSearchParams(window.location.search);
     let category = queryString.get(param);
@@ -28,11 +16,32 @@ export function GetTitle(sentence) {
     }
     return title;
 }
-export function ListCard(listElement) {
-    return `<a href = ../item-details/index.html?item-symbol=${listElement.symbol}>
+export function ListCard(listElement, category, paramsToShow = 'symbol') {
+    return `<a href = ../item-details/index.html?symbol=${listElement.symbol}&category=${category}>
         <div class = 'card'>
-            <h3>${listElement.symbol}</h3>
+            <h3>${listElement[paramsToShow]}</h3>
+            ${listElement['name'] != undefined ? `<h4>${listElement['name']}</h4>` : ''}
         </div>
     </a>`;
 }
-
+export function ListCardHistory(listElement) {
+    return `<a href = ../item-details/index.html?symbol=${listElement.symbol}&category=${listElement.type}>
+        <div class = 'card'>
+            <h3>${listElement.symbol}</h3>
+            <p>You have visited ${listElement.numberOfVisits} times</p>
+        </div>
+    </a>`;
+}
+export function DetermineTrend(openValue, closeValue) {
+    let trend = '';
+    if ((openValue - closeValue) < 0) {
+        trend = 'down';
+    }
+    else if ((openValue - closeValue) == 0) {
+        trend = 'normal';
+    }
+    else {
+        trend = 'up';
+    }
+    return trend;
+}

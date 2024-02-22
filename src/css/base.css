@@ -4,6 +4,7 @@
   --gray-accent: #1b2432;
   --dark-mode: #2c2b3c;
   --onyx: #403f4c;
+
 }
 
 * {
@@ -29,8 +30,20 @@ nav {
 }
 
 main {
+  background-color: #fafafa;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
+}
+
+footer {
+  background-color: var(--onyx);
+  color: #ffffff;
+  padding: 2rem;
+}
+
+.content-secondary {
+  padding: 2rem 4rem;
 }
 
 .brand {
@@ -70,24 +83,103 @@ main {
   overflow: hidden;
 }
 
-.top-level {}
+.top-level {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+}
+
+
 
 .card {
+  text-align: center;
+  background-color: #ffffff;
   box-sizing: border-box;
   padding: 3rem;
   display: flex;
   flex-direction: column;
   box-shadow: 1px 1px 10px #0000;
   border: 1px 1px 1px #0000;
+  transition: background-color 0.3s ease-in;
+
+}
+
+.card:hover {
+  color: #ffffff;
+  background-color: #403f4c;
+}
+
+@keyframes fadeAppear {
+  from {
+    display: none;
+    background-color: #fafafa;
+  }
+
+  50% {
+    border: 2px 2px solid #403f4c;
+  }
+
+  to {
+    display: flex;
+    background-color: #ffff;
+  }
+}
+
+.trend {
+  animation-name: trend-toogle;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+
+.subtitle {
+  color: var(--gray-accent);
+  font-weight: bold;
+}
+
+@keyframes trend-toogle {
+  from {
+    scale: 1;
+  }
+
+  to {
+    scale: 1.5
+  }
 }
 
 .card h3 {
   text-align: center;
 }
 
+#history {
+  list-style: none;
+
+  display: flex;
+  gap: 1rem;
+}
+
+#history li a {
+  text-decoration: none;
+}
+
+#title-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+}
+
 #grid-list {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  animation-name: fadeAppear;
+  animation-duration: 0.3s;
 }
 
 #grid-list li {
@@ -96,4 +188,41 @@ main {
 
 #grid-list li a {
   text-decoration: none;
+}
+
+#item-information {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#table-values {
+  width: 100%;
+}
+
+#table-values thead tr {
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#table-values tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#table-values tbody tr {
+  font-family: 'Oswald', Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-content: center;
+  padding: 1rem;
+  border-bottom: var(--base-black) 1px solid;
+}
+
+#table-values tbody tr td:first-child {
+  font-weight: bold;
 }

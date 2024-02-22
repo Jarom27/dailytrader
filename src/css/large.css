@@ -3,4 +3,9 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
+
+    #table-values {
+        max-width: 900px;
+        margin: 0 auto;
+    }
 }
