@@ -15,7 +15,6 @@ async function init() {
     let data = await GetData(category);
     listStocks.SetList(data.data);
     RenderItemList(gridContent, ReduceListForPreferedData(listStocks));
-    console.log(ReduceListForPreferedData(listStocks));
 }
 function ReduceListForPreferedData(list) {
     let param = '';

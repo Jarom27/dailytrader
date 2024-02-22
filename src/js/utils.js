@@ -23,3 +23,16 @@ export function ListCard(listElement, category, paramsToShow = 'symbol') {
         </div>
     </a>`;
 }
+export function DetermineTrend(openValue, closeValue) {
+    let trend = '';
+    if ((openValue - closeValue) < 0) {
+        trend = 'down';
+    }
+    else if ((openValue - closeValue) == 0) {
+        trend = 'normal';
+    }
+    else {
+        trend = 'up';
+    }
+    return trend;
+}
