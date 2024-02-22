@@ -137,6 +137,11 @@ footer {
 
 }
 
+.subtitle {
+  color: var(--gray-accent);
+  font-weight: bold;
+}
+
 @keyframes trend-toogle {
   from {
     scale: 1;
@@ -186,7 +191,9 @@ footer {
 }
 
 #item-information {
+  margin-left: 2rem;
   display: flex;
+  flex-direction: column;
 }
 
 #table-values {
